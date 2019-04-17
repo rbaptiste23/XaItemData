@@ -35,11 +35,6 @@ public class ItemRevision {
 		this.itemRevisionIdentity = itemRevisionIdentity;
 	}
 
-
-
- 
-
-
 	public String getItemdescription() {
 		return itemdescription;
 	}
