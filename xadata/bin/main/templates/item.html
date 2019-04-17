@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+	crossorigin="anonymous">
+	<title>Item Page</title>
+	
+</head>
+<body>
+
+  <div th:if="${not #lists.isEmpty(itemList)}">
+  <h2>Item List</h2>
+  <!-- Bootstrap class=table -->
+  <table class="table table-striped">
+    <thead class="thead-dark">
+    <tr>
+
+ 		<th>site</th>
+  		<th>item</th>
+   		<th>revision</th>
+        <th>Item Description</th>
+	    <th>Item Cost</th>
+	    <th>Item Price</th>
+ 
+	 
+    </tr>
+    </thead>
+    
+    <tr th:each="il : ${itemList}">
+     <td th:text="${il.itemRevisionIdentity.site}"></td>
+     <td th:text="${il.itemRevisionIdentity.item}"></td>
+     <td th:text="${il.itemRevisionIdentity.revision}"></td>
+     <td th:text="${il.itemdescription}"></td>
+     <td th:text="${il.cost}"></td>
+     <td th:text="${il.price}"></td>
+      
+    </tr>
+  </table>
+  </div>
+ 
+  
+    <div th:insert="~{footer :: copy}"></div>
+
+
+</body>
+</html>
