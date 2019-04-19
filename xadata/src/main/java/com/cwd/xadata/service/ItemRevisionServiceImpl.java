@@ -19,6 +19,7 @@ public class ItemRevisionServiceImpl implements ItemRevisionService {
 	public List<ItemRevision> getItems() {
 		List<ItemRevision> irList = itemRevisionRepository.findAll();
 		return irList;
+		
 	}
 
 }
