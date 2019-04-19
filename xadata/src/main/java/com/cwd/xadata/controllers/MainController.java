@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.cwd.xadata.service.ItemRevisionServiceImpl;
+ 
 
  
 
@@ -22,7 +23,11 @@ public class MainController {
 		modelAndView.setViewName("item");
 		modelAndView.getModel().put("itemList", itemRevisionServiceImpl.getItems() );		
 		 
-		System.out.println("Returning " + itemRevisionServiceImpl.getItems().size() + " Items");						
+		System.out.println("Returning " + itemRevisionServiceImpl.getItems().size() + " Items");
+		
+ 
+	
+		
 		return modelAndView;
 	}
 
