@@ -20,11 +20,9 @@
    		<th>revision</th>
         <th>Item Description</th>
 	    <th>Item Cost</th>
-	    <th>Item Pri4e</th>
-
-
-
+	    <th>Item Price</th>
     </tr>
+    
     </thead>
     
     <tr th:each="il : ${itemList}">
@@ -34,12 +32,10 @@
      <td th:text="${il.itemdescription}"></td>
      <td th:text="${il.cost}"></td>
      <td th:text="${il.price}"></td>
-     
     </tr>
   </table>
   </div>
-   
+  
     <div th:insert="~{footer :: copy}"></div>
-
 </body>
 </html>
